@@ -1,7 +1,8 @@
 from django.urls import path
 
-from doceescolha.views import home
+from doceescolha import views
 
 urlpatterns = [
-    path('', home)
+    path('', views.home, name="home"),
+    path('recipe/<int:id>/', views.recipe, name="single-recipe"),
 ]
